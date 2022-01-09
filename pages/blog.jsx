@@ -17,7 +17,9 @@ const classes = {
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('');
 
-  const filteredPosts = posts.filter(({ frontmatter }) => frontmatter.title.toLowerCase().includes(searchValue.toLowerCase()));
+  const filteredPosts = posts
+    .filter(({ frontmatter }) => frontmatter.title.toLowerCase()
+      .includes(searchValue.toLowerCase()));
 
   return (
     <Container>

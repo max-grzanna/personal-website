@@ -3,6 +3,7 @@ import {
   Html, Head, Main, NextScript,
 } from 'next/document';
 
+// eslint-disable-next-line no-unused-vars
 export default function Document(props) {
   return (
     <Html>

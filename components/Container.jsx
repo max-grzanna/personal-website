@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { MdClose } from 'react-icons/md';
+// eslint-disable-next-line import/extensions,import/no-unresolved
 import DarkModeToggle from '@/components/DarkModeToggle';
 
 const classes = {
@@ -39,22 +40,22 @@ export default function Navbar({ children }) {
           <div
             className="mt-8 lg:mt-4 h-screen lg:h-auto lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
           >
-            <Link href="/">
+            <Link href="/" passHref>
               <a className={classes.links}>
                 Home
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <a className={classes.links}>
                 Contact
               </a>
             </Link>
-            <Link href="/blog">
+            <Link href="/blog" passHref>
               <a className={classes.links}>
                 Blog
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <a className={classes.links}>
                 {' '}
                 Source

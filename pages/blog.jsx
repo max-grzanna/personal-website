@@ -4,7 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Container from '@/components/Container';
 import Blogpost from '@/components/Blogpost';
-import { sortByDate } from '@/utils/sortByDate';
+import sortByDate from '@/utils/sortByDate';
 
 const classes = {
   posts: 'flex flex-col',

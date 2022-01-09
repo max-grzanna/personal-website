@@ -12,6 +12,7 @@ const classes = {
 export default function Blogpost({ post }) {
   return (
     <Link href={`/blog/${post.slug}`}>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a>
         <div className={classes.post}>
           <div className={classes.titleColumn}>

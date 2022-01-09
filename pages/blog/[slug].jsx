@@ -54,7 +54,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { slug } }) {
   const markdownWithMatter = fs.readFileSync(path.join('data/blog', `${slug}.mdx`), 'utf8');
   const { data: frontmatter, content } = matter(markdownWithMatter);
-  console.log(frontmatter.title);
+
   return {
     props: {
       frontmatter,

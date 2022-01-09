@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const classes = {
   posts: 'flex flex-col',
-  post: 'mb-10 border-b',
+  post: 'mb-10 border-b dark:border-gray-500',
   titleColumn: 'flex flex-row justify-between',
   datePublished: 'text-gray-400',
   blogTitle: 'font-bold text-xl',

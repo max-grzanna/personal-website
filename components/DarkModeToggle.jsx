@@ -10,6 +10,7 @@ const classes = {
 
 export default function DarkModeToggle() {
   const { theme, setTheme } = useTheme();
+
   return (
     <button
       aria-label="Toggle Dark Mode"

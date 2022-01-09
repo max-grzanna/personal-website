@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { MdClose } from 'react-icons/md';
+import { AiOutlineGithub } from 'react-icons/ai';
 // eslint-disable-next-line import/extensions,import/no-unresolved
 import DarkModeToggle from '@/components/DarkModeToggle';
 
 const classes = {
-  links: 'lg:inline-flex mb-5  lg:w-auto w-full px-3 py-2 rounded text-black dark:text-gray-200 font-bold items-center justify-center hover:bg-gray-600 hover:text-white ',
+  links: 'lg:inline-flex mb-5   dlg:w-auto w-full px-3 py-2 rounded text-black dark:text-gray-200 font-bold items-center justify-center hover:bg-gray-600 hover:text-white ',
   DarkModeToggle: 'ml-auto',
   Content: 'lg:w-[800px] m-auto mt-5 lg:mt-20 p-4 flex items-start',
+  sourceLink: 'inline-flex flex-row-reverse',
+  githubIcon: 'relative left-1 inline-flex justify-start items-center bottom-px',
 };
 
 export default function Navbar({ children }) {
@@ -55,11 +58,13 @@ export default function Navbar({ children }) {
                 Blog
               </a>
             </Link>
-            <Link href="/" passHref>
+            <Link href="https://github.com/max-grzanna/personal-website" passHref>
               <a className={classes.links}>
-                {' '}
                 Source
+                {' '}
+                <AiOutlineGithub className={classes.githubIcon} size={20} />
               </a>
+
             </Link>
           </div>
         </div>

@@ -49,7 +49,7 @@ export default function Navbar({ children }) {
                 Contact
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/blog">
               <a className={classes.links}>
                 Blog
               </a>

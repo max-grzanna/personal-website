@@ -18,6 +18,12 @@
     "react"
   ],
   "rules": {
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "custom": "ignore"
+      }
+    ]
   },
   "settings": {
     "import/extensions": [

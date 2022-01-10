@@ -1,4 +1,4 @@
-export default function (req, res) {
+export default async function (req, res) {
   // eslint-disable-next-line global-require
   const nodemailer = require('nodemailer');
   const transporter = nodemailer.createTransport({
@@ -10,6 +10,18 @@ export default function (req, res) {
     },
     secure: true,
   });
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify((error, success) => {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log('Server is ready to take messages');
+        resolve(success);
+      }
+    });
+  });
   const mailData = {
     from: 'max.grzanna.tech@gmail.com',
     to: 'grzannamax@gmail.com',
@@ -18,10 +30,14 @@ export default function (req, res) {
     html: `<div>${req.body.message}</div><p>Sent from:
     ${req.body.email}</p>`,
   };
-  transporter.sendMail(mailData, (err, info) => {
-    if (err) console.log(err);
-    else console.log(info);
+
+  await new Promise((resolve, reject) => {
+    transporter.sendMail(mailData, (err, info) => {
+      if (err) reject(err);
+      else resolve(info);
+    });
   });
-  res.status(200);
+
+  res.status(200).json({ status: 'OK' });
   res.send();
 }

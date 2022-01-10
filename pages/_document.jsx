@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Html, Head, Main, NextScript,
 } from 'next/document';
-import Footer from '@/components/Footer';
 
 // eslint-disable-next-line no-unused-vars
 export default function Document(props) {

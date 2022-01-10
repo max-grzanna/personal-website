@@ -1,8 +1,4 @@
-import React from 'react';
-
 export default function (req, res) {
-  const password = process.env.PASSWORD;
-
   // eslint-disable-next-line global-require
   const nodemailer = require('nodemailer');
   const transporter = nodemailer.createTransport({
@@ -10,19 +6,18 @@ export default function (req, res) {
     host: 'smtp.gmail.com',
     auth: {
       user: 'max.grzanna.tech@gmail.com',
-      pass: password,
+      pass: process.env.PASSWORD,
     },
     secure: true,
   });
-
   const mailData = {
     from: 'max.grzanna.tech@gmail.com',
     to: 'grzannamax@gmail.com',
     subject: `Message From ${req.body.name}`,
-    text: req.body.message,
-    html: <div>{req.body.message}</div>,
+    text: `${req.body.message} | Sent from: ${req.body.email}`,
+    html: `<div>${req.body.message}</div><p>Sent from:
+    ${req.body.email}</p>`,
   };
-
   transporter.sendMail(mailData, (err, info) => {
     if (err) console.log(err);
     else console.log(info);

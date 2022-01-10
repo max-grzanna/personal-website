@@ -6,20 +6,21 @@ const c = {
   formWrapper: 'mt-10 w-full',
   formGroup: 'flex flex-col',
   form: 'flex flex-col gap-8',
-  input: 'border-2 border-gray-700 dark:text-black dark:bg-white dark:border-gray-200 rounded h-8 w-full p-2',
-  message: 'border-2 border-gray-700 dark:text-black dark:bg-white dark:border-gray-200 rounded h-40 w-full p-2',
-  inputButton: 'mr-auto bg-gray-900 dark:bg-white dark:text-black text-white rounded w-40 h-10 font-bold cursor-pointer hover:bg-gray-800 dark:hover:bg-gray-100 ',
+  input: 'border-2 border-gray-700 dark:text-black dark:bg-white dark:border-gray-200 h-8 w-full p-2',
+  message: 'border-2 border-gray-700 dark:text-black dark:bg-white dark:border-gray-200 w-full p-2',
+  inputButton: 'uppercase mr-auto bg-black dark:bg-white dark:text-black text-white w-40 h-10 font-bold cursor-pointer hover:bg-gray-800 dark:hover:bg-gray-100 ',
+  label: 'font-bold pb-1',
 };
 
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  // eslint-disable-next-line no-unused-vars
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('sending');
 
     const data = {
       name,
@@ -35,9 +36,7 @@ export default function Contact() {
       },
       body: JSON.stringify(data),
     }).then((r) => {
-      console.log('response recieved');
       if (r.status === 200) {
-        console.log('Response succeeded!');
         setSubmitted(true);
         setName('');
         setEmail('');
@@ -55,7 +54,8 @@ export default function Contact() {
 
         <form className={c.form}>
           <formGroup className={c.formGroup}>
-            <label htmlFor="name">Name:</label>
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+            <label htmlFor="name" className={c.label}>Name:</label>
             <input
               required
               className={c.input}
@@ -67,7 +67,8 @@ export default function Contact() {
             />
           </formGroup>
           <formGroup className={c.formGroup}>
-            <label htmlFor="email">Email:</label>
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+            <label className={c.label} htmlFor="email">Email:</label>
             <input
               required
               className={c.input}
@@ -79,8 +80,9 @@ export default function Contact() {
             />
           </formGroup>
           <formGroup className={c.formGroup}>
-            <label htmlFor="message">Message:</label>
-            <input
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+            <label className={c.label} htmlFor="message">Message:</label>
+            <textarea
               required
               className={c.message}
               type="text"
@@ -98,7 +100,6 @@ export default function Contact() {
             }}
           />
         </form>
-
       </div>
     </Container>
   );

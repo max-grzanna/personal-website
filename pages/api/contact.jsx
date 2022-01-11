@@ -34,10 +34,11 @@ export default async function (req, res) {
   await new Promise((resolve, reject) => {
     transporter.sendMail(mailData, (err, info) => {
       if (err) reject(err);
-      else resolve(info);
+      else {
+        res.status(200).json({ status: 'OK' });
+        res.send();
+        resolve(info);
+      }
     });
   });
-
-  res.status(200).json({ status: 'OK' });
-  res.send();
 }

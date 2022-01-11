@@ -9,18 +9,6 @@ export default async function (req, res) {
     },
     secure: true,
   });
-  await new Promise((resolve, reject) => {
-    // verify connection configuration
-    transporter.verify((error, success) => {
-      if (error) {
-        console.log(error);
-        reject(error);
-      } else {
-        console.log('Server is ready to take messages');
-        resolve(success);
-      }
-    });
-  });
   const mailData = {
     from: 'max.grzanna.tech@gmail.com',
     to: 'grzannamax@gmail.com',

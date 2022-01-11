@@ -6,8 +6,8 @@ const c = {
   formWrapper: 'mt-10 w-full',
   formGroup: 'flex flex-col',
   form: 'flex flex-col gap-8',
-  input: 'border-2 border-gray-700 dark:text-black dark:bg-white dark:border-gray-200 h-8 w-full p-2',
-  message: 'border-2 border-gray-700 dark:text-black dark:bg-white dark:border-gray-200 w-full p-2',
+  input: 'border-2 border-black dark:text-black dark:bg-white h-8 w-full p-2',
+  message: 'border-2 border-gray-700 dark:text-black dark:bg-white w-full p-2',
   inputButton: 'uppercase mr-auto bg-black dark:bg-white dark:text-black text-white w-40 h-10 font-bold cursor-pointer hover:bg-gray-800 dark:hover:bg-gray-100 ',
   label: 'font-bold pb-1',
 };

@@ -2,8 +2,7 @@ export default async function (req, res) {
   // eslint-disable-next-line global-require
   const nodemailer = require('nodemailer');
   const transporter = nodemailer.createTransport({
-    port: 465,
-    host: 'smtp.gmail.com',
+    service: 'gmail',
     auth: {
       user: 'max.grzanna.tech@gmail.com',
       pass: process.env.PASSWORD,

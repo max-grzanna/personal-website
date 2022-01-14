@@ -48,6 +48,7 @@ export async function getStaticProps() {
   const posts = files.map((filename) => {
     const slug = filename.replace('.mdx', '');
     const markdownWithMeta = fs.readFileSync(path.join('data/blog', filename), 'utf-8');
+
     const { data: frontmatter } = matter(markdownWithMeta);
     return {
       slug,

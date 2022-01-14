@@ -5,8 +5,9 @@ const classes = {
   posts: 'flex flex-col',
   post: 'mb-10 border-b dark:border-gray-500',
   titleColumn: 'flex flex-row justify-between',
-  datePublished: 'text-gray-400',
+  datePublished: 'text-gray-500',
   blogTitle: 'font-bold text-xl',
+  summary: 'text-gray-500',
 };
 
 export default function Blogpost({ post }) {
@@ -19,7 +20,7 @@ export default function Blogpost({ post }) {
             <h3 className={classes.blogTitle}>{post.frontmatter.title}</h3>
             <p className={classes.datePublished}>{new Date(post.frontmatter.publishedAt).toLocaleDateString('en-GB')}</p>
           </div>
-          <p>{post.frontmatter.summary}</p>
+          <p className={classes.summary}>{post.frontmatter.summary}</p>
         </div>
       </a>
     </Link>

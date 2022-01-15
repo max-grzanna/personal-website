@@ -3,9 +3,12 @@ import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import hydrate from 'next-mdx-remote/hydrate';
+import renderToString from 'next-mdx-remote/render-to-string';
 import Container from '@/components/Container';
 import GoBackButton from '@/components/GoBackButton';
 import readingTime from '@/utils/readingTime';
+import MDXComponents from '@/components/MDXComponents';
 
 const c = {
   blogPost: 'flex flex-col',
@@ -15,8 +18,12 @@ const c = {
   sideInfoContainer: 'flex items-center justify-between flex-row-reverse',
 };
 
-export default function PostPage({ frontmatter: { title, publishedAt }, content }) {
+export default function PostPage({ frontmatter: { title, publishedAt }, content, mdxSource }) {
   const time = readingTime(marked(content));
+
+  const test = hydrate(mdxSource, {
+    components: MDXComponents,
+  });
 
   return (
     <Container>
@@ -36,7 +43,9 @@ export default function PostPage({ frontmatter: { title, publishedAt }, content 
           </header>
 
           <div className={c.content}>
-            <div className="content" dangerouslySetInnerHTML={{ __html: marked(content) }} />
+            <div className="content">
+              {test}
+            </div>
           </div>
 
         </div>
@@ -64,12 +73,15 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { slug } }) {
   const markdownWithMatter = fs.readFileSync(path.join('data/blog', `${slug}.mdx`), 'utf8');
   const { data: frontmatter, content } = matter(markdownWithMatter);
-
+  const mdxSource = await renderToString(content, {
+    components: MDXComponents,
+  });
   return {
     props: {
       frontmatter,
       slug,
       content,
+      mdxSource,
     },
   };
 }

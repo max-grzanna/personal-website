@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { AiOutlineEye } from 'react-icons/ai';
 
 const c = {
-  cardWrapper: 'p-4 mb-6  bg-ebony text-white dark:bg-white dark:text-black rounded',
+  cardWrapper:
+        'p-4 bg-gray-900 text-white dark:bg-white dark:text-black rounded',
   viewCounter: 'flex items-center gap-2',
 };
 

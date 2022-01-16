@@ -42,6 +42,7 @@ export default function Navbar({ children }) {
             active ? '' : 'hidden'
           }   w-full lg:inline-flex lg:w-auto`}
         >
+
           <div
             className="mt-8 lg:mt-4 h-screen lg:h-auto lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
           >

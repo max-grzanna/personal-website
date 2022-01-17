@@ -7,13 +7,14 @@ import hydrate from 'next-mdx-remote/hydrate';
 import renderToString from 'next-mdx-remote/render-to-string';
 import Container from '@/components/Container';
 import GoBackButton from '@/components/GoBackButton';
+import ViewCounter from '@/components/ViewCounter';
 import readingTime from '@/utils/readingTime';
 import MDXComponents from '@/components/MDXComponents';
 
 const c = {
   blogPost: 'flex flex-col',
   title: 'font-bold text-3xl mt-8 mb-4',
-  sideInfo: ' text-gray-400',
+  sideInfo: 'text-gray-400',
   content: 'mt-10',
   sideInfoContainer: 'flex items-center justify-between flex-row-reverse',
 };
@@ -38,7 +39,10 @@ export default function PostPage({ frontmatter: { title, publishedAt }, content,
                 {' '}
                 min read
               </p>
-              <p className={c.sideInfo}>{new Date(publishedAt).toLocaleDateString('en-GB')}</p>
+              <div className={c.sideInfo}>
+                <p className={c.sideInfo}>{new Date(publishedAt).toLocaleDateString('en-GB')}</p>
+                <ViewCounter />
+              </div>
             </div>
           </header>
 

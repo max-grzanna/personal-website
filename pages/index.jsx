@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { VscGear } from 'react-icons/vsc';
+import Link from 'next/link';
+import { BsArrowRight } from 'react-icons/bs';
 import Container from '@/components/Container';
 import Card from '@/components/Card';
 import NextLogo from '../public/logos/nextjs-logo.svg';
@@ -51,6 +53,17 @@ function Index() {
           slug="contact-form"
         />
       </div>
+      <div className="mt-8">
+        <Link passHref href="/blog">
+          <a href="/blog">
+            <div className="inline-flex items-center">
+              Read all posts
+              <BsArrowRight className="relative left-2" />
+            </div>
+          </a>
+        </Link>
+
+      </div>
 
       <div className="flex items-center">
         <h2 className={c.postsHeading}>The Stack</h2>
@@ -61,7 +74,7 @@ function Index() {
           <h4>JS Framework</h4>
           <div className={c.iconHeading}>
             <p className={c.iconHeadingText}>Next.js</p>
-            <NextLogo className="w-4" />
+            <NextLogo className="w-4 dark:fill-white" />
           </div>
           <p className={c.stackDescription}>
             SEO friendly React framework for building static and server rendered
@@ -74,7 +87,7 @@ function Index() {
 
           <div className={c.iconHeading}>
             <p className={c.iconHeadingText}>Tailwind CSS</p>
-            <TailwindLogo className="w-4 h-auto" />
+            <TailwindLogo className="w-4 h-auto dark:fill-white" />
           </div>
           <p className={c.stackDescription}>
             Highly customizable utility framework. Doesn’t come with prebuild
@@ -85,7 +98,7 @@ function Index() {
           <h4>Database</h4>
           <div className={c.iconHeading}>
             <p className={c.iconHeadingText}>Planetscale</p>
-            <PscaleLogo className="w-4 h-auto" />
+            <PscaleLogo className="w-4 h-auto dark:fill-white" />
           </div>
           <p className={c.stackDescription}>
             Scalable and serverless MySQL platform with branching
@@ -96,7 +109,7 @@ function Index() {
           <h4>Deployment and hosting</h4>
           <div className={c.iconHeading}>
             <p className={c.iconHeadingText}>Vercel</p>
-            <VercelLogo className="w-4 h-auto" />
+            <VercelLogo className="w-4 h-auto dark:fill-white" />
           </div>
           <p className={c.stackDescription}>
             Cloud platform for generating and hosting sites, use serverless

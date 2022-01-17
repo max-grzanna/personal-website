@@ -4,7 +4,7 @@ import { AiOutlineEye } from 'react-icons/ai';
 
 const c = {
   cardWrapper:
-        'p-4 bg-gray-900 text-white dark:bg-white dark:text-black rounded',
+        'p-4 bg-gray-900 text-white dark:bg-white dark:text-black rounded basis-2/6',
   viewCounter: 'flex items-center gap-2',
 };
 

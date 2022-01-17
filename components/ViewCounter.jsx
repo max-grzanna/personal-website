@@ -4,7 +4,7 @@ import { fetcher } from '../lib/fetcher';
 
 export default function viewCounter({ slug }) {
   const { data } = useSWR(`/api/views/${slug}`, fetcher);
-  console.log(data);
+
   const views = Number(data?.total);
 
   useEffect(() => {

@@ -18,7 +18,7 @@ const c = {
   stackContainer: 'w-full flex flex-col gap-4',
   stackItem: 'border-b-2 last:border-none',
   stackGearIcon: 'relative top-3 left-2 animate-spin',
-  stackDescription: 'text-gray-500',
+  stackDescription: 'text-gray-500 dark:text-gray-400',
   iconHeading: 'flex gap-2',
   iconHeadingText: 'font-medium',
 };
@@ -68,6 +68,16 @@ function Index() {
       <div className="flex items-center">
         <h2 className={c.postsHeading}>The Stack</h2>
         <VscGear className={c.stackGearIcon} size={25} />
+      </div>
+      <div className="mb-8">
+        <p>
+          This website was build entirely using the
+          {' '}
+          <a target="_blank" href="https://jamstack.org/" className="underline" rel="noreferrer">Jamstack</a>
+          {' '}
+          architecture and aims to be serveless
+          first.
+        </p>
       </div>
       <div className={c.stackContainer}>
         <div className={c.stackItem}>

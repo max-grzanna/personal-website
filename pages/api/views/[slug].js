@@ -1,7 +1,7 @@
 import prisma from 'lib/prisma';
 
+// eslint-disable-next-line consistent-return
 export default async function handler(req, res) {
-  console.log();
   try {
     const slug = req.query.slug.toString();
 
@@ -33,5 +33,4 @@ export default async function handler(req, res) {
   } catch (e) {
     return res.status(500).json({ message: e.message });
   }
-  return null;
 }

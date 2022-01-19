@@ -16,5 +16,5 @@ export default function viewCounter({ slug }) {
   }, [slug]);
 
   // show views, if null output: ---, keeps logging error property of null
-  return <span>{`${views > 0 ? views.toLocaleString() : '–––'} views`}</span>;
+  return <span>{`${views > 0 ? views.toString() : '–––'} views`}</span>;
 }

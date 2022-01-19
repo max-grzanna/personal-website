@@ -12,7 +12,7 @@ const c = {
 
 export default function Card({ title, slug }) {
   const { data } = useSWR(`/api/views/${slug}`, fetcher);
-  const views = Number(data?.total);
+  const views = data?.total;
 
   return (
     <div className={c.cardWrapper}>

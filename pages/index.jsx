@@ -46,11 +46,11 @@ function Index() {
         />
         <Card
           title="Using serverless databases with Planetscale and Prisma"
-          slug="serverless-database-planetscale-prisma"
+          slug="serverless-database"
         />
         <Card
-          title="Coding a contact form with Next.js (without 3rd party libraries)"
-          slug="contact-form"
+          title="hello-mdx"
+          slug="hello-mdx"
         />
       </div>
       <div className="mt-8">

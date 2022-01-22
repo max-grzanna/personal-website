@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { HiMenuAlt4 } from 'react-icons/hi';
@@ -19,12 +20,24 @@ const classes = {
 export default function Navbar({ children }) {
   const [active, setActive] = useState(false);
 
+  const meta = {
+    title: 'Max Grzanna',
+    description: 'Blog about Front-end development',
+    type: 'website',
+  };
+
   const handleClick = () => {
     setActive(!active);
   };
 
   return (
     <>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta content={meta.description} name="description" />
+        <meta property="og:type" content={meta.type} />
+      </Head>
       <nav className="flex items-center justify-between flex-wrap p-3 lg:w-[900px] lg:m-auto lg:flex-row-reverse">
         <button
           type="button"

@@ -13,7 +13,7 @@ datasource db {
   referentialIntegrity = "prisma"
 }
 
-model views {
+model Views {
   slug  String @id @db.VarChar(128)
   count BigInt @default(1)
 }

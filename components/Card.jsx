@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { fetcher } from 'lib/fetcher';
 import useSWR from 'swr';
 import { AiOutlineEye } from 'react-icons/ai';
+import { fetcher } from '@/lib/fetcher';
 
 const c = {
   cardWrapper:

@@ -34,9 +34,10 @@ function Index() {
       />
       <h1 className={c.heading}>Hi I&apos;am Max</h1>
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua.
+        Hey there! Here you can find some blogs and other stuff i&apos;m interested in.
+        I built this website because I wanted to try
+        out Jamstack architecture and serverless stuff. 🚀
+
       </p>
       <h2 className={c.postsHeading}>New Posts</h2>
       <div className={c.postCardsContainer}>
@@ -50,7 +51,7 @@ function Index() {
         />
         <Card
           title="hello-mdx"
-          slug="hello-mdx"
+          slug="use-mdx"
         />
       </div>
       <div className="mt-8">

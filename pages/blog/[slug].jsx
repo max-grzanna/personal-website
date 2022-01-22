@@ -12,8 +12,9 @@ import readingTime from '@/utils/readingTime';
 import MDXComponents from '@/components/MDXComponents';
 
 const c = {
-  blogPost: 'flex flex-col',
-  title: 'font-bold text-3xl mt-8 mb-4',
+  Wrapper: 'w-full',
+  blogPost: 'flex flex-col w-full',
+  title: 'font-bold text-3xl mt-8 mb-4 border-none',
   sideInfo: 'text-gray-400',
   content: 'mt-10',
   sideInfoContainer: 'flex items-center justify-between flex-row-reverse',
@@ -28,7 +29,7 @@ export default function PostPage({ frontmatter: { title, publishedAt }, content,
 
   return (
     <Container>
-      <article>
+      <article className={c.Wrapper}>
         <div className={c.blogPost}>
           <GoBackButton />
           <header>

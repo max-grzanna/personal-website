@@ -50,7 +50,7 @@ function Index() {
           slug="serverless-database"
         />
         <Card
-          title="hello-mdx"
+          title="Using mdx"
           slug="use-mdx"
         />
       </div>

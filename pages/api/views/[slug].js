@@ -1,4 +1,4 @@
-import prisma from 'lib/prisma';
+import prisma from '@/lib/prisma';
 
 // eslint-disable-next-line consistent-return
 export default async function handler(req, res) {

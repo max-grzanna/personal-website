@@ -20,9 +20,10 @@ const c = {
   sideInfoContainer: 'flex items-center justify-between flex-row-reverse',
 };
 
-export default function PostPage({ frontmatter: { title, publishedAt }, content, mdxSource }) {
+export default function PostPage({
+  frontmatter: { title, publishedAt }, content, mdxSource, slug,
+}) {
   const time = readingTime(marked(content));
-
   const test = hydrate(mdxSource, {
     components: MDXComponents,
   });
@@ -42,7 +43,7 @@ export default function PostPage({ frontmatter: { title, publishedAt }, content,
               </p>
               <div className={c.sideInfo}>
                 <p className={c.sideInfo}>{new Date(publishedAt).toLocaleDateString('en-GB')}</p>
-                <ViewCounter />
+                <ViewCounter slug={slug} />
               </div>
             </div>
           </header>

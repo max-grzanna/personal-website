@@ -1,4 +1,28 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+function MDXImage(props) {
+  const { alt } = props;
+  return (
+    <div className="mb-8">
+      <Image
+        alt={alt}
+        src={props}
+        {...props}
+      />
+    </div>
+  );
+}
+
+function InlineLink(props) {
+  const { href, text } = props;
+  return (
+    <Link href={href} passHref>
+      <a className="underline text-blue-600" target="_blank">{text}</a>
+    </Link>
+  );
+}
 
 const MDXComponents = {
   h1: (props) => <h1 className="text-green-700" {...props} />,
@@ -12,12 +36,13 @@ const MDXComponents = {
   // ),
   br: (props) => <br {...props} />,
   // hr: Hr,
-  // a: CustomLink,
   p: (props) => <p {...props} />,
   ul: (props) => <ul className="pl-4" {...props} />,
   ol: (props) => <ol {...props} />,
   li: (props) => <li className="list-disc" {...props} />,
   // blockquote: Quote,
+  MDXImage,
+  InlineLink,
 };
 
 export default MDXComponents;

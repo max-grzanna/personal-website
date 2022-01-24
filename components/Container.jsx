@@ -82,7 +82,6 @@ export default function Navbar({ children }) {
                 {' '}
                 <AiOutlineGithub className={classes.githubIcon} size={20} />
               </a>
-
             </Link>
           </div>
         </div>

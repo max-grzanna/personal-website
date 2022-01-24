@@ -22,7 +22,7 @@ export default function Navbar({ children }) {
 
   const meta = {
     title: 'Max Grzanna',
-    description: 'Blog about Front-end development',
+    description: 'Blog about stuff that I thought were interesting.',
     type: 'website',
   };
 
@@ -37,6 +37,8 @@ export default function Navbar({ children }) {
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
         <meta property="og:type" content={meta.type} />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="google-site-verification" content="LYNPop6zGTPjqVWXNlel5zicwWKh2EjzVnZ-l4gCzzA" />
       </Head>
       <nav className="flex items-center justify-between flex-wrap p-3 lg:w-[900px] lg:m-auto lg:flex-row-reverse">
         <button

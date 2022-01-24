@@ -31,6 +31,7 @@ function Index() {
         src="/memoji.png"
         width={110}
         height={110}
+        alt="Avatar"
       />
       <h1 className={c.heading}>Hi I&apos;am Max</h1>
       <p>

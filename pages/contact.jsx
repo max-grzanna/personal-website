@@ -56,7 +56,7 @@ export default function Contact() {
       <div className={c.formWrapper}>
 
         <form className={c.form}>
-          <formGroup className={c.formGroup}>
+          <fieldset className={c.formGroup}>
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="name" className={c.label}>Name:</label>
             <input
@@ -68,8 +68,8 @@ export default function Contact() {
                 setName(e.target.value);
               }}
             />
-          </formGroup>
-          <formGroup className={c.formGroup}>
+          </fieldset>
+          <fieldset className={c.formGroup}>
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label className={c.label} htmlFor="email">Email:</label>
             <input
@@ -81,8 +81,8 @@ export default function Contact() {
                 setEmail(e.target.value);
               }}
             />
-          </formGroup>
-          <formGroup className={c.formGroup}>
+          </fieldset>
+          <fieldset className={c.formGroup}>
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label className={c.label} htmlFor="message">Message:</label>
             <textarea
@@ -94,7 +94,7 @@ export default function Contact() {
                 setMessage(e.target.value);
               }}
             />
-          </formGroup>
+          </fieldset>
           {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
           <div className={c.buttonGroup}>
             <button

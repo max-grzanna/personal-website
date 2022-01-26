@@ -1,14 +1,33 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { buildUrl } from 'cloudinary-build-url';
 
 function MDXImage(props) {
-  const { alt } = props;
+  const { alt, imgid } = props;
+  const standardUrl = buildUrl(imgid, {
+    cloud: {
+      cloudName: process.env.NEXT_PUBLIC_CLOUD_NAME,
+    },
+  });
+  const urlBlurred = buildUrl(imgid, {
+    cloud: {
+      cloudName: process.env.NEXT_PUBLIC_CLOUD_NAME,
+    },
+    transformations: {
+      effect: 'blur:1000',
+      quality: 1,
+    },
+  });
+
   return (
     <div className="mb-8">
       <Image
         alt={alt}
-        src={props}
+        priority="true"
+        placeholder="blur"
+        blurDataURL={urlBlurred}
+        src={standardUrl}
         {...props}
       />
     </div>

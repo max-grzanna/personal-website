@@ -32,12 +32,11 @@ function Index() {
         width={110}
         height={110}
         alt="Avatar"
+        priority="true"
       />
       <h1 className={c.heading}>Hi I&apos;am Max</h1>
       <p>
-        Hey there! Here you can find some blogs and other stuff i&apos;m interested in.
-        I built this website because I wanted to try
-        out Jamstack architecture and serverless stuff. 🚀
+        Hey there! Here you can find some blogs and other stuff i&apos;m interested in. 🚀
 
       </p>
       <h2 className={c.postsHeading}>New Posts</h2>

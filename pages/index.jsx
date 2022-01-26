@@ -28,7 +28,7 @@ function Index() {
     <Container>
       <Image
         className={c.headerImage}
-        src="/memoji.png"
+        src="https://res.cloudinary.com/pybghtl/image/upload/v1643194136/startpage/memoji_zeznkt.png"
         width={110}
         height={110}
         alt="Avatar"

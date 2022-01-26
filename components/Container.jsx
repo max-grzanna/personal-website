@@ -9,9 +9,9 @@ import DarkModeToggle from '@/components/DarkModeToggle';
 import Footer from '@/components/Footer';
 
 const classes = {
-  links: 'lg:inline-flex mb-5   dlg:w-auto w-full px-3 py-2 rounded text-black dark:text-gray-200 font-bold items-center justify-center hover:bg-gray-600 hover:text-white ',
+  links: 'lg:inline-flex mb-5 dlg:w-auto w-full px-3 py-2 rounded text-black dark:text-gray-200 font-bold items-center justify-center hover:bg-gray-600 hover:text-white ',
   DarkModeToggle: 'ml-auto',
-  Content: 'lg:w-[800px] m-auto mt-5 lg:mt-20 p-4 flex items-start min-h-screen flex-col',
+  Content: 'lg:w-[800px] m-auto lg:mt-5 lg:mt-20 p-4 flex items-start min-h-screen flex-col',
   sourceLink: 'inline-flex flex-row-reverse',
   githubIcon: 'relative left-1 inline-flex justify-start items-center bottom-px',
   footer: 'lg:w-[800px] m-auto mt-5 lg:mt-20 p-4 flex items-start',

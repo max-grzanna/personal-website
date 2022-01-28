@@ -41,4 +41,8 @@ a {
     pre {
         @apply bg-gray-200 rounded p-6 rounded
     }
+
+    code {
+        @apply overflow-auto block
+    }
 }

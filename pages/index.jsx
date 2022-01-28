@@ -42,8 +42,8 @@ function Index() {
       <h2 className={c.postsHeading}>New Posts</h2>
       <div className={c.postCardsContainer}>
         <Card
-          title="Coding a contact form with Next.js (without 3rd party libraries)"
-          slug="contact-form"
+          title="Ship less JS in production with replacing react by preact"
+          slug="replace-react-preact"
         />
         <Card
           title="Using serverless databases with Planetscale and Prisma"

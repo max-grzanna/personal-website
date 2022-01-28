@@ -50,11 +50,9 @@ const MDXComponents = {
   h4: (props) => <h4 {...props} />,
   h5: (props) => <h5 {...props} />,
   h6: (props) => <h6 {...props} />,
-  // inlineCode: (props) => (
-  //   <Code colorScheme="yellow" fontSize="0.84em" {...props} />
-  // ),
   br: (props) => <br {...props} />,
   // hr: Hr,
+
   p: (props) => <p {...props} />,
   ul: (props) => <ul className="pl-4" {...props} />,
   ol: (props) => <ol {...props} />,

@@ -1,0 +1,59 @@
+---
+title: 'Ship less JS in production with replacing react by preact'
+publishedAt: '2021-01-28'
+summary: 'This is guide on how to change react to preact in production builds in order to reduce the size of your application.'
+---
+
+
+<MDXImage alt="container-ship"
+          imgid="cargo-ship.jpg"
+          width={3360} height={1890} layout="responsive"/>
+
+## Preface
+
+There are plenty of ways when it comes to bundle size and increasing performance of a react application.
+When using Nextjs, a simple way to do this is by replacing react with preact in the production build.
+
+<br/>
+
+But a word of caution at this point. Preact is a slimmed down version of react, with less features like:
+
+<br/>
+
+- PropTypes
+- Synthetic Events
+
+<br/>
+
+A full list of missing or altered features can be found here: <InlineLink
+href="https://preactjs.com/guide/v8/differences-to-react/"
+text="Preact differences to react"/>.
+<br/>
+
+So check your application for these features and verify if everything is working after building and before deploying to production.
+
+<br/>
+
+## Implementation
+
+To get started if you haven't already, create a `next.config.js` and include the following code:
+
+<br/>
+
+```js:
+module.exports = {
+  webpack: (config, { dev, isServer }) => {
+    // Replace React with Preact only in client production build
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        react: 'preact/compat',
+        'react-dom/test-utils': 'preact/test-utils',
+        'react-dom': 'preact/compat',
+      });
+    }
+
+    return config;
+  },
+};
+```
+

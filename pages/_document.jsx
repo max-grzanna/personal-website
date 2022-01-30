@@ -13,7 +13,7 @@ export default function Document(props) {
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-white dark:bg-ebony text-black dark:text-gray-100">
+      <body className="bg-white dark:bg-ebony text-gray-600 dark:text-gray-100">
         <Main />
         <NextScript />
       </body>

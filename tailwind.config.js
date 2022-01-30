@@ -14,6 +14,15 @@ module.exports = {
       colors: {
         ebony: '#121212',
       },
+      animation: {
+        opacity: 'fadeIn .35s ease-in-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%, 1%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
     },
   },
   plugins: [],

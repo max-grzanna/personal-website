@@ -9,6 +9,7 @@ import sortByDate from '@/utils/sortByDate';
 
 const classes = {
   posts: 'flex flex-col w-full',
+  headline: 'mb-8',
   inputWrapper: 'relative w-full',
   input: 'border-gray-500 border-solid border-2 mb-10 rounded w-full h-10 p-2',
   inputIcon: 'absolute right-2.5 top-2.5 fill-gray-500 dark:fill-gray-100',
@@ -24,7 +25,7 @@ export default function Blog({ posts }) {
   return (
     <Container title="Max Grzanna - Blog">
       <div className={classes.posts}>
-        <h1>Blog</h1>
+        <h1 className={classes.headline}>Blog</h1>
         <div className={classes.inputWrapper}>
           <i><BiSearch className={classes.inputIcon} size={20} /></i>
           <input

@@ -12,8 +12,8 @@ import VercelLogo from '../public/logos/vercel-logo.svg';
 
 const c = {
   headerImage: 'max-w-full rounded-full bg-gray-400 block relative',
-  heading: 'text-4xl font-bold border-none mt-8 mb-4',
-  postsHeading: 'mt-12',
+  heading: 'text-4xl font-medium border-none mt-8 mb-4',
+  postsHeading: 'mt-12 font-medium',
   postCardsContainer: 'flex flex-col lg:flex-row gap-4',
   stackContainer: 'w-full flex flex-col gap-4',
   stackItem: 'border-b-2 last:border-none',
@@ -29,17 +29,17 @@ function Index() {
       <Image
         className={c.headerImage}
         src="https://res.cloudinary.com/pybghtl/image/upload/v1643194136/startpage/memoji_zeznkt.png"
-        width={110}
-        height={110}
+        width={100}
+        height={100}
         alt="Avatar"
         priority="true"
       />
-      <h1 className={c.heading}>Hi I&apos;am Max</h1>
+      <h1 className={c.heading}>Hey there!</h1>
       <p>
-        Hey there! Here you can find some blogs and other stuff i&apos;m interested in. 🚀
+        Here you can find some blogs and other stuff I thought were interesting. 🚀
 
       </p>
-      <h2 className={c.postsHeading}>New Posts</h2>
+      <h3 className={c.postsHeading}>New Posts</h3>
       <div className={c.postCardsContainer}>
         <Card
           title="Ship less JS in production with replacing react by preact"
@@ -67,7 +67,7 @@ function Index() {
       </div>
 
       <div className="flex items-center">
-        <h2 className={c.postsHeading}>The Stack</h2>
+        <h3 className={c.postsHeading}>The Stack</h3>
         <VscGear className={c.stackGearIcon} size={25} />
       </div>
       <div className="mb-8">
@@ -82,7 +82,7 @@ function Index() {
       </div>
       <div className={c.stackContainer}>
         <div className={c.stackItem}>
-          <h4>JS Framework</h4>
+          <h5>JS Framework</h5>
           <div className={c.iconHeading}>
             <p className={c.iconHeadingText}>Next.js</p>
             <NextLogo className="w-4 h-9 dark:fill-white" />
@@ -94,7 +94,7 @@ function Index() {
           </p>
         </div>
         <div className={c.stackItem}>
-          <h4>CSS Framework</h4>
+          <h5>CSS Framework</h5>
 
           <div className={c.iconHeading}>
             <p className={c.iconHeadingText}>Tailwind CSS</p>
@@ -106,7 +106,7 @@ function Index() {
           </p>
         </div>
         <div className={c.stackItem}>
-          <h4>Database</h4>
+          <h5>Database</h5>
           <div className={c.iconHeading}>
             <p className={c.iconHeadingText}>Planetscale</p>
             <PscaleLogo className="w-4 h-9 dark:fill-white" />
@@ -117,7 +117,7 @@ function Index() {
           </p>
         </div>
         <div className={c.stackItem}>
-          <h4>Deployment and hosting</h4>
+          <h5>Deployment and hosting</h5>
           <div className={c.iconHeading}>
             <p className={c.iconHeadingText}>Vercel</p>
             <VercelLogo className="w-4 h-9 dark:fill-white" />

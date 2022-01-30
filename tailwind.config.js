@@ -9,7 +9,7 @@ module.exports = {
         height: 'height',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
       },
       colors: {
         ebony: '#121212',

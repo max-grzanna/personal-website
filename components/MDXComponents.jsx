@@ -38,7 +38,7 @@ function InlineLink(props) {
   const { href, text } = props;
   return (
     <Link href={href} passHref>
-      <a className="underline text-blue-600" target="_blank">{text}</a>
+      <a className="underline" target="_blank">{text}</a>
     </Link>
   );
 }

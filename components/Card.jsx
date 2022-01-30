@@ -6,7 +6,7 @@ import { fetcher } from '@/lib/fetcher';
 
 const c = {
   cardWrapper:
-        'p-4 bg-gray-900 text-white dark:bg-gray-700 dark:text-white rounded basis-2/6',
+        'p-4 bg-black text-white dark:bg-gray-100 dark:text-black rounded basis-2/6',
   viewCounter: 'flex items-center gap-2',
 };
 

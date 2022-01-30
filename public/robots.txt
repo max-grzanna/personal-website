@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://max-grzanna.tech
+
+# Sitemaps
+Sitemap: https://max-grzanna.tech/sitemap.xml
+Sitemap: https://max-grzanna.tech/sitemap-0.xml

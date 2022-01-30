@@ -50,8 +50,8 @@ function Index() {
           slug="serverless-database"
         />
         <Card
-          title="Using mdx"
-          slug="use-mdx"
+          title="Coding a contact form with Next.js (without using 3rd party services)"
+          slug="contact-form"
         />
       </div>
       <div className="mt-8">

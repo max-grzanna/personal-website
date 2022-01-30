@@ -49,7 +49,7 @@ export default function Contact() {
   };
 
   return (
-    <Container>
+    <Container title="Max Grzanna - Contact">
 
       <h1 className={c.headline}>Contact</h1>
 

@@ -3,7 +3,7 @@ import Container from '@/components/Container';
 
 export default function PrivacyPolicy() {
   return (
-    <Container>
+    <Container title="Max Grzanna - Privacy">
       <h1>Privacy Policy</h1>
 
     </Container>

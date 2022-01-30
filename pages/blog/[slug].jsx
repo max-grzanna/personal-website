@@ -29,7 +29,7 @@ export default function PostPage({
   });
 
   return (
-    <Container>
+    <Container title={`${title} - Max Grzanna`} description={`Blogpost about ${title}`}>
       <article className={c.Wrapper}>
         <div className={c.blogPost}>
           <header>

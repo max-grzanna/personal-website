@@ -17,13 +17,13 @@ const classes = {
   footer: 'lg:w-[800px] m-auto mt-5 lg:mt-20 p-4 flex items-start',
 };
 
-export default function Navbar({ children }) {
+export default function Container(props) {
   const [active, setActive] = useState(false);
-
+  const { children, ...customMeta } = props;
   const meta = {
-    title: 'Max Grzanna',
     description: 'Blog about stuff that I thought were interesting.',
     type: 'website',
+    ...customMeta,
   };
 
   const handleClick = () => {

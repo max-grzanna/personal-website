@@ -14,7 +14,7 @@ import MDXComponents from '@/components/MDXComponents';
 const c = {
   Wrapper: 'w-full',
   blogPost: 'flex flex-col w-full',
-  title: 'font-bold text-3xl lg:mt-8 mb-4 border-none',
+  title: 'text-3xl lg:mt-8 mb-4 border-none',
   sideInfo: 'text-gray-400',
   content: 'mt-10',
   sideInfoContainer: 'flex items-center justify-between flex-row-reverse',

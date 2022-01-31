@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Container from '@/components/container';
+import Container from '@/components/Container';
 
 const c = {
   headline: 'w-full mb-12',

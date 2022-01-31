@@ -9,7 +9,7 @@ export default function Document(props) {
     <Html lang="en">
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </Head>

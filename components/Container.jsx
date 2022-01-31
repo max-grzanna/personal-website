@@ -1,12 +1,7 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { HiMenuAlt4 } from 'react-icons/hi';
-import { MdClose } from 'react-icons/md';
-import { AiOutlineGithub } from 'react-icons/ai';
-// eslint-disable-next-line import/extensions,import/no-unresolved
-import DarkModeToggle from '@/components/DarkModeToggle';
+import React from 'react';
 import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 
 const classes = {
   links: 'lg:inline-flex mb-5 dlg:w-auto w-full px-3 py-2 rounded text-black dark:text-gray-200 font-bold items-center justify-center dark:hover:bg-gray-500 dark:text-black hover:bg-black hover:text-white ',
@@ -18,16 +13,11 @@ const classes = {
 };
 
 export default function Container(props) {
-  const [active, setActive] = useState(false);
   const { children, ...customMeta } = props;
   const meta = {
     description: 'Blog about stuff that I thought were interesting.',
     type: 'website',
     ...customMeta,
-  };
-
-  const handleClick = () => {
-    setActive(!active);
   };
 
   return (
@@ -39,56 +29,8 @@ export default function Container(props) {
         <meta property="og:type" content={meta.type} />
         <meta name="theme-color" content="#ffffff" />
         <meta name="google-site-verification" content="LYNPop6zGTPjqVWXNlel5zicwWKh2EjzVnZ-l4gCzzA" />
-
       </Head>
-      <nav
-        className="flex items-center justify-between flex-wrap p-5 lg:w-[900px] lg:m-auto lg:flex-row-reverse "
-      >
-        <button
-          type="button"
-          className="inline-flex p-3 rounded lg:hidden hover:text-white outline-none"
-          onClick={handleClick}
-        >
-          {active === true
-            ? (<MdClose className="fill-black dark:fill-white" size={25} />)
-            : (<HiMenuAlt4 className="fill-black dark:fill-white" size={25} />
-            )}
-        </button>
-        <DarkModeToggle classname={classes.DarkModeToggle} />
-        <div
-          className={`${
-            active ? '' : 'hidden'
-          }   w-full lg:inline-flex lg:w-auto px-2 animate-opacity`}
-        >
-
-          <div
-            className="mt-8 lg:mt-4 h-screen lg:h-auto lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
-          >
-            <Link href="/" passHref>
-              <a className={classes.links}>
-                Home
-              </a>
-            </Link>
-            <Link href="/contact" passHref>
-              <a className={classes.links}>
-                Contact
-              </a>
-            </Link>
-            <Link href="/blog" passHref>
-              <a className={classes.links}>
-                Blog
-              </a>
-            </Link>
-            <Link href="https://github.com/max-grzanna/personal-website" passHref>
-              <a className={classes.links}>
-                Source
-                {' '}
-                <AiOutlineGithub className={classes.githubIcon} size={20} />
-              </a>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
       <div className={classes.Content}>
         {children}
       </div>

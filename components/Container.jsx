@@ -28,7 +28,7 @@ export default function Container(props) {
         <meta content={meta.description} name="description" />
         <meta property="og:type" content={meta.type} />
         <meta name="theme-color" content="#ffffff" />
-        <meta name="google-site-verification" content="LYNPop6zGTPjqVWXNlel5zicwWKh2EjzVnZ-l4gCzzA" />
+        <meta name="google-site-verification" content="vXTAhO8Fruu1g_zPChN_L4yjJuCe5yjWZgCy0HpBghg" />
       </Head>
       <Navigation />
       <div className={classes.Content}>

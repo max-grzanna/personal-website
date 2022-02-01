@@ -3,7 +3,10 @@ import Container from '@/components/Container';
 
 export default function Imprint() {
   return (
-    <Container title="Max Grzanna - Imprint">
+    <Container
+      title="Max Grzanna - Imprint"
+      description="Imprint for this website"
+    >
       <div>
         <h1>Impressum</h1>
         <p>Angaben gemäß § 5 TMG</p>

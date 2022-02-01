@@ -49,7 +49,10 @@ export default function Contact() {
   };
 
   return (
-    <Container title="Max Grzanna - Contact">
+    <Container
+      title="Max Grzanna - Contact"
+      description="Feel free to fill in the contact form in case you want to reach me."
+    >
 
       <h1 className={c.headline}>Contact</h1>
 

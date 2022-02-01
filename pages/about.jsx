@@ -8,7 +8,10 @@ const c = {
 
 export default function About() {
   return (
-    <Container title="Max Grzanna - About">
+    <Container
+      title="Max Grzanna - About"
+      description="Some information about myself."
+    >
       <h1 className={c.headline}>About me</h1>
       <div className="mb-8 relative block">
         <Image

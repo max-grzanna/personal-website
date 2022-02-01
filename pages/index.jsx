@@ -25,7 +25,7 @@ const c = {
 
 function Index() {
   return (
-    <Container title="Max Grzanna - Home" description="Max Grzanna Home">
+    <Container title="Max Grzanna - Home" description="This is the homepage of my personal blog.">
       <Image
         className={c.headerImage}
         src="https://res.cloudinary.com/pybghtl/image/upload/v1643194136/startpage/memoji_zeznkt.png"

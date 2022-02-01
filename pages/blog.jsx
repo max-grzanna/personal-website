@@ -23,7 +23,10 @@ export default function Blog({ posts }) {
       .includes(searchValue.toLowerCase()));
 
   return (
-    <Container title="Max Grzanna - Blog">
+    <Container
+      title="Max Grzanna - Blog"
+      description="All the blog posts about the stuff i thought were interesting."
+    >
       <div className={classes.posts}>
         <h1 className={classes.headline}>Blog</h1>
         <div className={classes.inputWrapper}>

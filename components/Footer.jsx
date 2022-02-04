@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { AiOutlineGithub } from 'react-icons/ai';
 
 const c = {
-  footerWrapper: 'border-t-2 border-gray-700 dark:border-gray-300 w-full pt-5 flex flex-col gap-y-4 text-gray-600',
+  footerWrapper: 'border-t-2 border-gray-700 dark:border-gray-300 w-full pt-5 flex flex-col gap-y-4 text-gray-600 dark:text-gray-300',
   githubIcon: 'relative left-1 inline-flex justify-start items-center bottom-px',
   copyright: 'relative bottom-0 mt-5 text-gray-400 text-center',
 };

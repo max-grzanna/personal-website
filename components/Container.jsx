@@ -9,7 +9,7 @@ const classes = {
   Content: 'lg:w-[800px] m-auto lg:mt-5 lg:mt-12 p-8 flex items-start min-h-screen flex-col',
   sourceLink: 'inline-flex flex-row-reverse',
   githubIcon: 'relative left-1 inline-flex justify-start items-center bottom-px',
-  footer: 'lg:w-[800px] m-auto mt-5 lg:mt-20 p-4 flex items-start',
+  footer: 'lg:w-[800px] m-auto mt-5 lg:mt-20 p-8 flex items-start',
 };
 
 export default function Container(props) {

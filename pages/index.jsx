@@ -13,7 +13,7 @@ import VercelLogo from '../public/logos/vercel-logo.svg';
 const c = {
   h1: 'invisible p-0 m-0 w-0 h-0 border-none',
   headerWrapper: 'lg:flex lg:flex-row-reverse items-center',
-  imageWrapper: 'lg:w-2/6 lg:flex lg:justify-center',
+  imageWrapper: 'md:w-3/5 lg:flex lg:justify-center',
   headerImage: 'max-w-full rounded-full bg-gray-400 block relative',
   heading: 'text-4xl block font-bold border-none mt-4',
   postsHeading: 'mt-12 font-medium',

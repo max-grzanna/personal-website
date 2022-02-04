@@ -7,12 +7,7 @@ import {
 export default function Document(props) {
   return (
     <Html lang="en">
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+      <Head />
       <body className="bg-white dark:bg-ebony text-gray-600 dark:text-gray-100">
         <Main />
         <NextScript />

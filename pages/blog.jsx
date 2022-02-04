@@ -9,7 +9,7 @@ import sortByDate from '@/utils/sortByDate';
 
 const classes = {
   posts: 'flex flex-col w-full',
-  headline: 'mb-8',
+  headline: 'mb-8 font-bold',
   inputWrapper: 'relative w-full',
   input: 'border-gray-500 border-solid border-2 mb-10 rounded w-full h-10 p-2',
   inputIcon: 'absolute right-2.5 top-2.5 fill-gray-500 dark:fill-gray-100',

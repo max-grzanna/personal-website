@@ -7,7 +7,7 @@ const classes = {
   titleColumn: 'flex flex-row justify-between',
   datePublished: 'text-gray-500 pl-6',
   blogTitle: '',
-  summary: 'text-gray-500',
+  summary: 'text-gray-500 pb-4',
 };
 
 export default function Blogpost({ post }) {

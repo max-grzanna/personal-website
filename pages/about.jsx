@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Container from '@/components/Container';
 
 const c = {
-  headline: 'w-full mb-12',
+  headline: 'w-full font-bold mb-12',
 };
 
 export default function About() {

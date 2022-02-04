@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html,
 body {
     padding: 0;
@@ -18,6 +19,31 @@ a {
 }
 
 @layer base {
+
+    @font-face {
+        font-family: Fira Sans;
+        font-weight: 700;
+        src: url(../public/fontfaces/Fira_Sans/FiraSans-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: Fira Sans;
+        font-weight: 600;
+        src: url(../public/fontfaces/Fira_Sans/FiraSans-Medium.ttf);
+    }
+
+    @font-face {
+        font-family: Merriweather;
+        font-weight: 400;
+        src: url(../public/fontfaces/Merriweather/Merriweather-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: Merriweather;
+        font-weight: 700;
+        src: url(../public/fontfaces/Merriweather/Merriweather-Bold.ttf);
+    }
+
     h1 {
         @apply font-medium text-4xl text-black dark:text-white border-b-2 border-black dark:border-white pb-2;
     }
@@ -38,8 +64,12 @@ a {
         @apply font-medium text-black dark:text-white mb-1 text-lg;
     }
 
+    heading {
+        @apply font-medium text-black dark:text-white pb-2;
+    }
+
     p {
-        @apply my-2;
+        @apply font-paragraph;
     }
 
     pre {

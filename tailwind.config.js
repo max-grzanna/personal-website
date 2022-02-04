@@ -9,7 +9,8 @@ module.exports = {
         height: 'height',
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ['Fira Sans', 'sans-serif'],
+        paragraph: ['Merriweather', 'serif'],
       },
       colors: {
         ebony: '#121212',

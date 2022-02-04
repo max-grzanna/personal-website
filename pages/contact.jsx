@@ -3,7 +3,7 @@ import { ImCheckmark } from 'react-icons/im';
 import Container from '@/components/Container';
 
 const c = {
-  headline: 'w-full',
+  headline: 'w-full font-bold',
   formWrapper: 'mt-10 w-full',
   formGroup: 'flex flex-col',
   form: 'flex flex-col gap-8',

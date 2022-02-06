@@ -29,6 +29,7 @@ const c = {
 
 function Index() {
   return (
+
     <Container title="Max Grzanna - Home" description="This is the homepage of my personal blog.">
       <div className={c.headerWrapper}>
         <div className={c.imageWrapper}>

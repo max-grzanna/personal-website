@@ -11,8 +11,11 @@ export default function Document(props) {
     return (
         <Html lang="en">
             <Head>
-                <Script>
-                    {`(function(f, a, t, h, o, m){
+                <Script
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: ` 
+(function(f, a, t, h, o, m){
 \ta[h]=a[h]||function(){
 \t\t(a[h].q=a[h].q||[]).push(arguments)
 \t};
@@ -22,8 +25,10 @@ export default function Document(props) {
 \tm.parentNode.insertBefore(o,m)
 })(document, window, '//max-grzanna-analytics.xyz/tracker.js', 'fathom');
 fathom('set', 'siteId', 'WEHXY');
-fathom('trackPageview');`}
-                </Script>
+fathom('trackPageview');
+  `,
+                    }}
+                />
 
 
             </Head>

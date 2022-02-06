@@ -11,7 +11,7 @@ export default function Document(props) {
     return (
         <Html lang="en">
             <Head>
-                <Script id="show-banner" strategy="beforeInteractive">
+                <Script>
                     {`(function(f, a, t, h, o, m){
 \ta[h]=a[h]||function(){
 \t\t(a[h].q=a[h].q||[]).push(arguments)

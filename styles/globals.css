@@ -80,6 +80,10 @@ a {
         @apply overflow-auto block
     }
 
+    .cookie-container {
+        bottom: -4rem !important;
+    }
+
     .cookie-content {
         padding-top: 2rem;
     }

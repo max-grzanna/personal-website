@@ -52,22 +52,9 @@ function MyApp({ Component, pageProps }) {
       {cookieIsSet === true
                 && (
                 <Script
-                  strategy="afterInteractive"
-                  dangerouslySetInnerHTML={{
-                    __html: ` 
-(function(f, a, t, h, o, m){
-\ta[h]=a[h]||function(){
-\t\t(a[h].q=a[h].q||[]).push(arguments)
-\t};
-\to=f.createElement('script'),
-\tm=f.getElementsByTagName('script')[0];
-\to.async=1; o.src=t; o.id='fathom-script';
-\tm.parentNode.insertBefore(o,m)
-})(document, window, '//max-grzanna-analytics.xyz/tracker.js', 'fathom');
-fathom('set', 'siteId', 'WEHXY');
-fathom('trackPageview');
-  `,
-                  }}
+                  defer
+                  data-domain="max-grzanna.tech"
+                  src="https://analytics.max-grzanna.tech/js/plausible.js"
                 />
                 )}
       <Component {...pageProps} />

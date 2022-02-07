@@ -3,7 +3,6 @@ import React from 'react';
 import {
     Html, Head, Main, NextScript,
 } from 'next/document';
-import Script from 'next/script'
 
 
 // eslint-disable-next-line no-unused-vars

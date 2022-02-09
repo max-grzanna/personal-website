@@ -9,8 +9,7 @@ module.exports = {
         height: 'height',
       },
       fontFamily: {
-        sans: ['Fira Sans', 'sans-serif'],
-        paragraph: ['Merriweather', 'serif'],
+        sans: ['IBM Plex Sans', 'sans-serif'],
       },
       colors: {
         ebony: '#121212',

@@ -21,7 +21,7 @@ const c = {
 };
 
 export default function PostPage({
-  frontmatter: { title, publishedAt }, content, mdxSource, slug,
+  frontmatter: { title, publishedAt, summary }, content, mdxSource, slug,
 }) {
   const time = readingTime(marked(content));
   const test = hydrate(mdxSource, {
@@ -29,7 +29,7 @@ export default function PostPage({
   });
 
   return (
-    <Container title={`${title} - Max Grzanna`} description={`Blogpost about ${title}`}>
+    <Container title={`${title} - Max Grzanna`} description={summary}>
       <article className={c.Wrapper}>
         <div className={c.blogPost}>
           <header>

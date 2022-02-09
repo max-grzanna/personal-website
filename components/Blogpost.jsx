@@ -5,9 +5,9 @@ const classes = {
   posts: 'flex flex-col',
   post: 'mb-10 border-b dark:border-gray-500',
   titleColumn: 'flex flex-row justify-between',
-  datePublished: 'text-gray-500 pl-6',
+  datePublished: 'text-gray-400 pl-6',
   blogTitle: '',
-  summary: 'text-gray-500 pb-4',
+  summary: 'text-gray-400 pb-4',
 };
 
 export default function Blogpost({ post }) {

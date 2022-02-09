@@ -6,7 +6,7 @@ import { BsArrowRight } from 'react-icons/bs';
 import { fetcher } from '@/lib/fetcher';
 
 const c = {
-  cardWrapper: 'p-4 rounded basis-2/6 border-2 border-gray-400',
+  cardWrapper: 'p-4 rounded basis-2/6 border-2 border-gray-400 hover:border-gray-700 hover:border-4',
   cardArrowIcon: 'relative right-0 stroke-black top-4 w-12 ml-4',
   viewCounter: 'flex items-center gap-2',
   linkSection: 'flex flex-row items-center',

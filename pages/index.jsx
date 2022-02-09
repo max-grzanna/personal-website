@@ -11,17 +11,17 @@ import PscaleLogo from '../public/logos/planetscale-logo.svg';
 import VercelLogo from '../public/logos/vercel-logo.svg';
 
 const c = {
-  h1: 'invisible p-0 m-0 w-0 h-0 border-none',
-  headerWrapper: 'lg:flex lg:flex-row-reverse items-center',
-  imageWrapper: 'md:w-3/5 lg:flex lg:justify-center',
+  subheading: 'font-normal text-gray-800 text-base mt-0',
+  headerWrapper: 'lg:flex lg:flex-row-reverse items-center mb-6',
+  imageWrapper: 'md:w-5/12 lg:flex lg:justify-center',
   headerImage: 'max-w-full rounded-full bg-gray-400 block relative',
   heading: 'text-4xl block font-bold border-none mt-4',
-  postsHeading: 'mt-12 font-medium',
+  postsHeading: 'mt-12 font-bold',
   postCardsContainer: 'flex flex-col lg:flex-row gap-4',
   stackContainer: 'w-full flex flex-col gap-4',
   stackItem: 'border-b-2 last:border-none',
   stackGearIcon: 'relative top-3 left-2 animate-spin',
-  stackDescription: 'text-gray-500 dark:text-gray-400 pb-4',
+  stackDescription: 'dark:text-gray-400 pb-4',
   iconHeading: 'flex gap-2 items-center mb-2',
   iconHeadingText: 'font-medium',
   stackHeader: 'text-large',
@@ -30,7 +30,11 @@ const c = {
 function Index() {
   return (
 
-    <Container title="Max Grzanna - Home" description="This is the homepage of my personal blog.">
+    <Container
+      title="Max Grzanna - Web developer based in Jena, Germany"
+      description="I&apos;m a web developer based in Jena, Germany.
+      Here you can find some blogs and other stuff I thought were interesting."
+    >
       <div className={c.headerWrapper}>
         <div className={c.imageWrapper}>
           <Image
@@ -43,14 +47,17 @@ function Index() {
           />
         </div>
         <div>
-          <h1 className={c.h1}>Max Grzanna</h1>
-          <heading className={c.heading}>Hey there!</heading>
+          <h1 className={c.heading}>Max Grzanna</h1>
+          <h2 className={c.subheading}>
+            Hey there.
+            I&apos;m a web developer based in Jena, Germany.
+          </h2>
           <p>
             Here you can find some blogs and other stuff I thought were interesting. 🚀
           </p>
         </div>
       </div>
-      <h2 className={c.postsHeading}>New Posts</h2>
+      <h3 className={c.postsHeading}>New Posts</h3>
       <div className={c.postCardsContainer}>
         <Card
           title="Ship less JS in production with replacing react by preact"
@@ -78,7 +85,7 @@ function Index() {
       </div>
 
       <div className="flex items-center">
-        <h3 className={c.postsHeading}>The Stack</h3>
+        <h3 className={c.postsHeading}>The site uses</h3>
         <VscGear className={c.stackGearIcon} size={25} />
       </div>
       <div className="mb-8">
@@ -87,7 +94,7 @@ function Index() {
           {' '}
           <a target="_blank" href="https://jamstack.org/" className="underline" rel="noreferrer">Jamstack</a>
           {' '}
-          architecture and aims to be serveless
+          architecture and aims to be serverless
           first.
         </p>
       </div>

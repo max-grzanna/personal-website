@@ -10,7 +10,7 @@ export default function Document(props) {
     return (
         <Html lang="en">
             <Head/>
-            <body className="bg-white dark:bg-ebony text-gray-600 dark:text-gray-100">
+            <body className="bg-white dark:bg-ebony text-gray-800 dark:text-gray-100">
             <Main/>
             <NextScript/>
             </body>

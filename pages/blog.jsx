@@ -25,7 +25,8 @@ export default function Blog({ posts }) {
   return (
     <Container
       title="Max Grzanna - Blog"
-      description="All the blog posts about the stuff i thought were interesting."
+      description="Some thoughts on software, web development,tech
+      and other stuff i thought were interesting."
     >
       <div className={classes.posts}>
         <h1 className={classes.headline}>Blog</h1>

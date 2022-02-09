@@ -21,31 +21,29 @@ a {
 @layer base {
 
     @font-face {
-        font-family: Fira Sans;
+        font-family: IBM Plex Sans;
         font-weight: 700;
-        src: url(../public/fontfaces/Fira_Sans/FiraSans-Bold.ttf);
+        src: url(../public/fontfaces/IBM_Plex_Sans/IBMPlexSans-Bold.ttf);
     }
 
     @font-face {
-        font-family: Fira Sans;
+        font-family: IBM Plex Sans;
         font-weight: 600;
-        src: url(../public/fontfaces/Fira_Sans/FiraSans-Medium.ttf);
+        src: url(../public/fontfaces/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf);
     }
-
     @font-face {
-        font-family: Merriweather;
+        font-family: IBM Plex Sans;
+        font-weight: 500;
+        src: url(../public/fontfaces/IBM_Plex_Sans/IBMPlexSans-Medium.ttf);
+    }
+    @font-face {
+        font-family: IBM Plex Sans;
         font-weight: 400;
-        src: url(../public/fontfaces/Merriweather/Merriweather-Regular.ttf);
-    }
-
-    @font-face {
-        font-family: Merriweather;
-        font-weight: 700;
-        src: url(../public/fontfaces/Merriweather/Merriweather-Bold.ttf);
+        src: url(../public/fontfaces/IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
     }
 
     h1 {
-        @apply font-medium text-4xl text-black dark:text-white border-b-2 border-black dark:border-white pb-2;
+        @apply font-bold text-4xl text-black dark:text-white border-b-2 border-black dark:border-white pb-2;
     }
 
     h2 {
@@ -66,10 +64,6 @@ a {
 
     heading {
         @apply font-medium text-black dark:text-white pb-2;
-    }
-
-    p {
-        @apply font-paragraph;
     }
 
     pre {

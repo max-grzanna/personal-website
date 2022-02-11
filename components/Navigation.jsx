@@ -20,7 +20,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className="flex items-center justify-between flex-wrap p-5 lg:w-[900px] lg:m-auto lg:flex-row-reverse mt-2 "
+      className="flex items-center justify-between flex-wrap p-5 lg:w-[800px] lg:m-auto lg:flex-row-reverse mt-2 "
     >
       <button
         type="button"
@@ -36,7 +36,7 @@ export default function Navigation() {
       <div
         className={`${
           active ? '' : 'hidden'
-        }   w-full lg:inline-flex lg:w-auto px-2 animate-opacity`}
+        }   w-full lg:inline-flex lg:w-auto animate-opacity`}
       >
 
         <div

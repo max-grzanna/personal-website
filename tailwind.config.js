@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         ebony: '#121212',
+        ebonyLight: '#1f1f1f',
       },
       animation: {
         opacity: 'fadeIn .35s ease-in-out',

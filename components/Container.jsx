@@ -9,7 +9,8 @@ const classes = {
   Content: 'lg:w-[800px] m-auto lg:mt-5 lg:mt-12 p-8 pt-0 flex items-start min-h-screen flex-col',
   sourceLink: 'inline-flex flex-row-reverse',
   githubIcon: 'relative left-1 inline-flex justify-start items-center bottom-px',
-  footer: 'lg:w-[800px] m-auto mt-5 lg:mt-20 p-8 flex items-start',
+  footer: 'lg:w-[800px] m-auto mt-5 lg:mt-20 p-8 flex items-start bg-gray-100 lg:bg-transparent',
+  footerWrapper: 'w-100 bg-gray-100 dark:bg-ebonyLight',
 };
 
 export default function Container(props) {
@@ -34,8 +35,10 @@ export default function Container(props) {
       <div className={classes.Content}>
         {children}
       </div>
-      <div className={classes.footer}>
-        <Footer />
+      <div className={classes.footerWrapper}>
+        <div className={classes.footer}>
+          <Footer />
+        </div>
       </div>
     </>
 

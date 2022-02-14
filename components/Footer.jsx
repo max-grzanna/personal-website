@@ -8,7 +8,7 @@ const c = {
   githubIcon: 'relative left-1 inline-flex justify-start items-center bottom-px',
   copyright: 'relative bottom-0 mt-5 text-gray-400 text-center',
   footerLinks: 'border-b pb-2 dark:border-gray-500',
-  collapsibleLinks: 'flex flex-col gap-2 pl-6',
+  collapsibleLinks: 'flex flex-col gap-2 pl-6 text-gray-500',
 };
 
 export default function Footer() {
@@ -51,6 +51,11 @@ export default function Footer() {
       <Link href="/contact" passHref>
         <a className={c.footerLinks}>
           Contact
+        </a>
+      </Link>
+      <Link href="/blog" passHref>
+        <a className={c.footerLinks}>
+          Blog
         </a>
       </Link>
       <span className={c.copyright}>

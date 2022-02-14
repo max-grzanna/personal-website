@@ -5,6 +5,7 @@ import { buildUrl } from 'cloudinary-build-url';
 
 function MDXImage(props) {
   const { alt, imgid } = props;
+
   const standardUrl = buildUrl(imgid, {
     cloud: {
       cloudName: process.env.NEXT_PUBLIC_CLOUD_NAME,

@@ -15,7 +15,7 @@ const c = {
   headerWrapper: 'lg:flex lg:flex-row-reverse items-center mb-6',
   imageWrapper: 'md:w-5/12 lg:flex lg:justify-center',
   headerImage: 'max-w-full rounded-full bg-gray-400 block relative',
-  heading: 'text-4xl block font-bold border-none mt-4',
+  heading: 'text-5xl block font-bold border-none mt-4',
   postsHeading: 'mt-12 font-bold',
   postCardsContainer: 'flex flex-col lg:flex-row gap-4',
   stackContainer: 'w-full flex flex-col gap-4',
@@ -29,10 +29,9 @@ const c = {
 
 function Index() {
   return (
-
     <Container
       title="Max Grzanna - Web developer based in Jena, Germany"
-      description="I&apos;m a web developer based in Jena, Germany.
+      description="I'm a web developer based in Jena, Germany.
       Here you can find some blogs and other stuff I thought were interesting."
     >
       <div className={c.headerWrapper}>
@@ -49,15 +48,15 @@ function Index() {
         <div>
           <h1 className={c.heading}>Max Grzanna</h1>
           <h2 className={c.subheading}>
-            Hey there.
-            I&apos;m a web developer based in Jena, Germany.
+            Hey there. I&apos;m a developer based in Jena, Germany.
           </h2>
           <p>
-            Here you can find some blogs and other stuff I thought were interesting. 🚀
+            Here you can find some blogs and other stuff I thought were
+            interesting. 🚀
           </p>
         </div>
       </div>
-      <h3 className={c.postsHeading}>New Posts</h3>
+      <h2 className={c.postsHeading}>New Posts</h2>
       <div className={c.postCardsContainer}>
         <Card
           title="Ship less JS in production with replacing react by preact"
@@ -81,7 +80,6 @@ function Index() {
             </div>
           </a>
         </Link>
-
       </div>
 
       <div className="flex items-center">
@@ -92,10 +90,16 @@ function Index() {
         <p>
           This website was build entirely using the
           {' '}
-          <a target="_blank" href="https://jamstack.org/" className="underline" rel="noreferrer">Jamstack</a>
+          <a
+            target="_blank"
+            href="https://jamstack.org/"
+            className="underline"
+            rel="noreferrer"
+          >
+            Jamstack
+          </a>
           {' '}
-          architecture and aims to be serverless
-          first.
+          architecture and aims to be serverless first.
         </p>
       </div>
       <div className={c.stackContainer}>

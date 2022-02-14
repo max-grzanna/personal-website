@@ -47,6 +47,11 @@ export default function Navigation() {
               Home
             </a>
           </Link>
+          <Link href="/blog" passHref>
+            <a className={classes.NavLinks}>
+              Blog
+            </a>
+          </Link>
           <Link href="/contact" passHref>
             <a className={classes.NavLinks}>
               Contact
@@ -55,11 +60,6 @@ export default function Navigation() {
           <Link href="/about" passHref>
             <a className={classes.NavLinks}>
               About
-            </a>
-          </Link>
-          <Link href="/blog" passHref>
-            <a className={classes.NavLinks}>
-              Blog
             </a>
           </Link>
           <Link href="https://github.com/max-grzanna/personal-website" passHref>

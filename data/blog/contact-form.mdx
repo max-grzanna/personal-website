@@ -3,10 +3,116 @@ title: 'Coding a contact form with Next.js (without using 3rd party services)'
 publishedAt: '2021-03-03'
 summary: 'This is guide on how to code a contact form with Next.js and Nodemailer without using any 3rd party services.'
 ---
-<MDXImage alt="earth from space"
-          imgid="under-construction_vym6ug.jpg"
-          width={1920} height={1277} layout="responsive"/>
+<MDXImage alt="letterboxes"
+          imgid="letterboxes.jpg"
+          width={1897} height={1278} layout="responsive"/>
 
-## under construction
 
-This is guide on how to code a contact form with Next.js and Nodemailer without using any 3rd party services.
+### Step 1: Create the HTML Form
+
+First of all, we need a html input form to let the user input some data and submit it via a submit button.
+For the sake of simplicity I am gonna use name, email and a message. Feel free to style it the way you want.
+
+<br/>
+
+```
+     <form>
+        <fieldset className="flex flex-col">
+          <label htmlFor="name">Name:</label>
+          <input
+            className="border border-black mb-2"
+            required
+            type="text"
+            name="name"
+          />
+        </fieldset>
+        <fieldset className="flex flex-col">
+          <label htmlFor="email">Email:</label>
+          <input
+            className="border border-black mb-2"
+            required
+            type="email"
+            name="email"
+          />
+        </fieldset>
+        <fieldset className="flex flex-col">
+          <label htmlFor="message">Message:</label>
+          <textarea
+            className="border border-black mb-2"
+            required
+            type="text"
+            name="message"
+          />
+        </fieldset>
+        <div>
+          <button
+            className="border bg-gray-100"
+            type="submit"
+          >
+            Send
+          </button>
+        </div>
+      </form>
+```
+<br/>
+
+I added some really basic styling to it using tailwind.
+
+<br/>
+
+### Step 2: Add some functionality to it
+
+We have to use the useState hook to capture the input text.
+
+<br/>
+
+```
+import { useState } from 'react'
+```
+
+<br/>
+
+```
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [message, setMessage] = useState('')
+const [submitted, setSubmitted] = useState(false)
+```
+<br/>
+
+These state variables hold the user&apos;s input text and the state of the button (if it&apos;s submitted or not).
+
+<br/>
+
+Now let&apos;s change our input fields and add an onChange listener like this:
+
+<br/>
+
+```
+ <input
+   className="border border-black mb-2"
+   required
+   type="text"
+   name="name"
+   onChange={(e) => {
+    setName(e.target.value);
+   }}
+ />
+```
+
+<br/>
+
+If you type some information into the form like so, you can check the current state of the component
+by looking at the React devtools.
+
+<br/>
+
+<MDXImage alt="form with sample data"
+          imgid="form-state.png"
+          width={200} height={230}/>
+
+<br/>
+
+<MDXImage alt="react devtools state"
+          imgid="form-state-devtools.png"
+          width={464} height={194}/>

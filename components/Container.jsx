@@ -30,6 +30,7 @@ export default function Container(props) {
         <meta property="og:type" content={meta.type} />
         <meta name="theme-color" content="#ffffff" />
         <meta name="google-site-verification" content="vXTAhO8Fruu1g_zPChN_L4yjJuCe5yjWZgCy0HpBghg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navigation />
       <div className={classes.Content}>

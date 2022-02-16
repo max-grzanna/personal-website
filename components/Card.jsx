@@ -22,7 +22,7 @@ export default function Card({ title, slug }) {
       <Link href={`/blog/${slug}`} passHref>
         <a>
           <div className={c.linkSection}>
-            <h5 className="font-medium">{title}</h5>
+            <heading className="font-medium">{title}</heading>
             <BsArrowRight size={25} className={c.cardArrowIcon} />
           </div>
           <div className={c.viewCounter}>

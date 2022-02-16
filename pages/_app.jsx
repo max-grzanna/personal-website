@@ -36,17 +36,17 @@ function MyApp({ Component, pageProps }) {
           color: 'black',
           cursor: 'pointer',
           flex: '0 0 auto',
-          fontSize: '13px',
           margin: 'none',
           padding: '1rem',
+          fontSize: '1rem',
           textDecoration: 'underline',
         }}
       >
-        This website uses cookies.
+        <heading className="font-normal text-black dark:text-black">This website uses cookies.</heading>
         {' '}
         <br />
-        <span style={{ fontSize: '12px' }}>By continuing to browse on this website, you agree to our use of cookies.</span>
-        <BsArrowRight className="block relative top-12 left-32 cursor-pointer" />
+        <span style={{ fontSize: '1rem' }}>By continuing to browse on this website, you agree to our use of cookies.</span>
+        <BsArrowRight className="block relative top-[3.25rem] left-40 cursor-pointer" />
         <BiCookie size={30} className="block absolute top-4  cursor-pointer" />
       </CookieConsent>
       {cookieIsSet === true

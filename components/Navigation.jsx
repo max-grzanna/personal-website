@@ -26,6 +26,7 @@ export default function Navigation() {
         type="button"
         className="inline-flex p-3 rounded lg:hidden hover:text-white outline-none"
         onClick={handleClick}
+        aria-label="Menu Button"
       >
         {active === true
           ? (<MdClose className="fill-black dark:fill-white" size={25} />)

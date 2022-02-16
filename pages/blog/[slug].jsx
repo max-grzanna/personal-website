@@ -47,7 +47,7 @@ export default function PostPage({
             </div>
           </header>
 
-          <div className={c.content}>
+          <div className={c.content} id="blogpost">
             <div className="content">
               {test}
             </div>

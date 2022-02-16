@@ -1,5 +1,5 @@
 ---
-title: 'Ditch Google Analytics and get an alternative'
+title: 'Ditch Google Analytics and get an alternative.'
 publishedAt: '2022-02-16'
 summary: 'There are plenty of alternatives to Google Analytics. I will showcase Splitbee, Fathom and Plausible Analytics.'
 ---
@@ -10,5 +10,55 @@ summary: 'There are plenty of alternatives to Google Analytics. I will showcase 
 
 ### Why you should consider using alternatives to GA
 
-Google Analytics with it's 86% market share is the most widely used web analytics tool out there.
-It offers a wide spectrum of functionality for free. As Tim O’Reilly said: "If you're not paying for the product, you are the product."
+Google Analytics with it's 85% (<InlineLink href="https://w3techs.com/technologies/history_overview/traffic_analysis" text="Source"/>) market share is the most widely used web analytics tool out there.
+It offers a wide spectrum of functionality for free. There are some major drawbacks like:
+
+- No privacy by design
+- Large script size (compared to competitors)
+- To complex for small sites
+- Closed source
+- data sampling
+
+Run by the largest adtech company, GA is well known to share data with advertising and other third-party companies.
+Google monetizes data, collected by your own site in order to analyse personal and behavioral trends across all business areas.
+
+I know it's overused, but it still applies:
+ > As Tim O’Reilly said: "If you're not paying for the product, you are the product."
+
+There is even a <InlineLink href="https://wikipedia.org/wiki/Google_Analytics"
+text="Wikipedia article"/> about scandals caused by Google Analytics. Furthermore several countries like France
+and Austria have found, that the use of GA is a breach of General Data Protection Regulation (GDPR). In the case of
+an austrian website called NetDoktor, european regulators are not okay with companies sending not properly protected
+data to servers located oversees (<InlineLink href="https://www.wired.com/story/google-analytics-europe-austria-privacy-shield/" text="Source"/>).
+
+A few weeks ago, the European Parliament’s Covid-19 testing website had also breached
+GDPR by using cookies from Google Analytics. IMHO it's a matter of time until the EU brings strong regulations related to
+tools from Big Tech.
+
+<br/>
+
+### Here are some alternatives
+
+There are some really great alternatives out there with lots of neat features. The ones I will write about are
+called <InlineLink href="https://splitbee.io/" text="Splittbee"/>, <InlineLink href="https://usefathom.com/" text="Fathom"/> and <InlineLink href="https://plausible.io/" text="Plausible"/>.
+
+All three come with:
+
+- Privacy-friendliness
+- GDPR compliance with data stored in the EU
+- Small script sizes
+- Ad-Block immunity
+- Complete Data ownership
+
+
+Mostly used blockers like uBlock don't have scripts such as those three on their blacklists. With Plausible and Fathom you have the
+option to self-host your analytics application and proxy the tracking script from your domain name.
+
+I personally use <InlineLink href="https://plausible.io/" text="Plausible"/> at the moment, because I like the self-hosted
+version and keeping my own data. Here is a very good example of installing Plausible Analytics on a remote server (digital ocean) using
+docker: <InlineLink href="https://www.digitalocean.com/community/tutorials/how-to-install-plausible-analytics-on-ubuntu-20-04" text="Install Plausible on Ubuntu" />
+
+If you don't want to self-host your tool, you can use Splitbee for free (for small sites with little traffic) and Plausible/Fathom for 9$/14$. The cloud hosted plans
+does not require the use of cookies on all three alternatives.
+
+So give it a try and stop exploiting visitor data for Big Tech profits. Please.
